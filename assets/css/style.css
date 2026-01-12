@@ -965,6 +965,11 @@ main {
   #PORTFOLIO
 \*-----------------------------------*/
 
+.filter-list,
+.filter-select-box {
+  display: none;
+}
+
 .filter-list {
   display: none;
 }
