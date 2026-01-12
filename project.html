@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Detail Project</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <style>
+    .project-detail {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      color: white;
+    }
+
+    .project-detail img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .project-detail h1 {
+      margin-bottom: 10px;
+    }
+
+    .project-detail p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .project-buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .project-buttons a {
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      background: #ffb703;
+      color: #000;
+      font-weight: 600;
+    }
+
+    .back-btn {
+      margin-top: 30px;
+      display: inline-block;
+      color: #ffb703;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="project-detail">
+    <img id="projectImage" />
+    <h1 id="projectTitle"></h1>
+    <p id="projectDesc"></p>
+
+    <div class="project-buttons">
+      <a id="githubLink" target="_blank">Github</a>
+      <a id="demoLink" target="_blank">Lihat Web</a>
+    </div>
+
+    <a href="index.html" class="back-btn">← Kembali</a>
+  </div>
+
+<script>
+const projects = {
+  "ps-management": {
+    title: "Playstation Management",
+    image: "./assets/images/psnew.png",
+    desc: "Aplikasi manajemen rental playstation berbasis web dengan fitur booking, transaksi, dan laporan.",
+    github: "https://github.com/USERNAME/ps-management",
+    demo: "https://ps-demo.vercel.app"
+  },
+
+  "job-search": {
+    title: "Job Search Web",
+    image: "./assets/images/nexhire.png",
+    desc: "Website pencarian kerja dengan fitur filter pekerjaan dan UI responsif.",
+    github: "https://github.com/USERNAME/job-search",
+    demo: "https://job-search-demo.vercel.app"
+  },
+
+  "learning-center": {
+    title: "Learning Center Web",
+    image: "./assets/images/scover.png",
+    desc: "Platform manajemen kursus dan siswa berbasis web.",
+    github: "https://github.com/USERNAME/learning-center",
+    demo: "https://learning-center-demo.vercel.app"
+  }
+};
+
+// Ambil ID dari URL
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+const project = projects[id];
+
+if (project) {
+  document.getElementById("projectImage").src = project.image;
+  document.getElementById("projectTitle").textContent = project.title;
+  document.getElementById("projectDesc").textContent = project.desc;
+  document.getElementById("githubLink").href = project.github;
+  document.getElementById("demoLink").href = project.demo;
+} else {
+  document.body.innerHTML = "<h2 style='color:white;text-align:center'>Project tidak ditemukan 😢</h2>";
+}
+</script>
+
+</body>
+</html>

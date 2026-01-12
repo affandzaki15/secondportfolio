@@ -151,7 +151,7 @@
       </div>
 
     </aside>
-    
+
     <!--
       - #main-content
     -->
@@ -458,7 +458,7 @@
 
         <section class="projects">
 
-        
+
 
           <div class="filter-select-box">
 
@@ -496,8 +496,8 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="web development" data-id="ps">
+              <a href="javascript:void(0)">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -514,8 +514,8 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="web development" data-id="job">
+               <a href="javascript:void(0)">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -532,8 +532,8 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="web design" data-id="learning">
+               <a href="javascript:void(0)">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -550,8 +550,8 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="applications" data-id="online">
+               <a href="javascript:void(0)">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -568,8 +568,8 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="web design" data-id="dorm">
+              <a href="javascript:void(0)">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -586,8 +586,8 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="web design" data-id="game">
+              <a href="javascript:void(0)">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -604,10 +604,32 @@
               </a>
             </li>
 
-           </ul>
+          </ul>
         </section>
 
       </article>
+
+      <!-- MODAL PROJECT DETAIL -->
+      <div class="project-modal" id="projectModal">
+        <div class="modal-content">
+
+          <button class="modal-close" id="closeModal">✕</button>
+
+          <img id="modalImage" />
+          <h2 id="modalTitle"></h2>
+          <p id="modalDesc"></p>
+
+          <div class="modal-tech" id="modalTech"></div>
+
+
+          <div class="modal-buttons">
+            <a id="modalGithub" target="_blank">Github</a>
+            <a id="modalDemo" target="_blank">Lihat Web</a>
+          </div>
+
+        </div>
+      </div>
+
 
     </div>
 
